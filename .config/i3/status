@@ -1,0 +1,13 @@
+#!/bin/sh
+
+do_line()
+{
+	msg=""
+	msg="$msg`date +'%b %d, %H:%M %Z'`"
+	echo "$msg"
+}
+
+while [ 1 ]; do
+	do_line
+	sleep 19
+done
