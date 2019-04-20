@@ -1,14 +1,18 @@
-LINKS=	.xinitrc \
+LINKS=	.Xresources \
+	.vim \
+	.vimrc \
 	.config \
-	.Xresources
+	.xinitrc \
 
-PKGS=	dialog4ports \
+PKGS=	cgdb \
+	dialog4ports \
+	doas \
+	gdb \
 	git \
 	i3 \
 	inconsolata-ttf \
 	setxkbmap \
 	subversion \
-	sudo \
 	thingylaunch \
 	vim-console \
 	virtualbox-ose-additions \
@@ -16,7 +20,7 @@ PKGS=	dialog4ports \
 	xf86-input-mouse \
 	xinit \
 	xrdb \
-	xterm
+	xterm \
 
 links:
 .for f in ${LINKS}
@@ -25,3 +29,6 @@ links:
 
 pkgs:
 	pkg install ${PKGS}
+
+vim:
+	make -C .vim
