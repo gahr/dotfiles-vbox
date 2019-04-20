@@ -24,7 +24,7 @@ PKGS=	cgdb \
 
 links:
 .for f in ${LINKS}
-	ln -sf ${f:tA}  ~/$f
+	ln -fhs ${f:tA}  ~/$f
 .endfor
 
 pkgs:
