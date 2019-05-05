@@ -1,8 +1,11 @@
 LINKS=	.Xresources \
+	.config \
+	.cshrc \
+	.gitconfig \
+	.ssh/config \
 	.vim \
 	.vimrc \
-	.config \
-	.xinitrc \
+	.xinitrc
 
 PKGS=	cgdb \
 	dialog4ports \
