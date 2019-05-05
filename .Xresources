@@ -1,5 +1,5 @@
 xterm*faceName: Inconsolata
-xterm*faceSize: 11
+xterm*faceSize: 13
 
 #define S_base03        #002b36
 #define S_base02        #073642
