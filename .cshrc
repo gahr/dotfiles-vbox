@@ -42,5 +42,7 @@ if ($?prompt) then
 		bindkey -k up history-search-backward
 		bindkey -k down history-search-forward
 	endif
-
 endif
+
+setenv PATH /usr/local/libexec/ccache:$PATH
+setenv CCACHE_PATH /usr/bin:/usr/local/bin
