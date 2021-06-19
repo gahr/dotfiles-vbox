@@ -1,7 +1,10 @@
-BUNDLES=	skywind3000/asyncrun.vim \
-		Rip-Rip/clang_complete \
+BUNDLES=	\
 		altercation/vim-colors-solarized \
-		mileszs/ack.vim
+		editorconfig/editorconfig-vim \
+		mileszs/ack.vim \
+		Rip-Rip/clang_complete \
+		skywind3000/asyncrun.vim \
+
 all:
 	mkdir -p autoload bundle
 	curl -LSso autoload/pathogen.vim https://tpo.pe/pathogen.vim
