@@ -11,18 +11,16 @@ PKGS=	cgdb \
 	dialog4ports \
 	doas \
 	gdb \
-	git \
+	git-lite \
 	i3 \
 	inconsolata-ttf \
 	p5-ack \
 	setxkbmap \
-	subversion \
 	thingylaunch \
 	vim-console \
 	virtualbox-ose-additions \
 	xauth \
-	xf86-input-keyboard \
-	xf86-input-mouse \
+	xf86-input-libinput \
 	xinit \
 	xrdb \
 	xterm \
@@ -39,6 +37,9 @@ rc:
 	sysrc vboxservice_enable=yes
 	sysrc ntpdate_enable=yes
 
+doas:
+	echo "permit nopass :wheel" > /usr/local/etc/doas.conf
+
 links:
 	for f in ${LINKS}; do \
 	    rf=${PWD}/$$f; \
@@ -50,6 +51,6 @@ links:
 vim:
 	make -C .vim
 
-system: pkgs rc
+system: pkgs rc doas
 
 user: links vim
