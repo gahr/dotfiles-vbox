@@ -35,6 +35,7 @@ pkgs:
 rc:
 	sysrc vboxguest_enable=yes
 	sysrc vboxservice_enable=yes
+	sysrc vboxservice_flags="--disable-timesync"
 	sysrc ntpdate_enable=yes
 
 doas:
